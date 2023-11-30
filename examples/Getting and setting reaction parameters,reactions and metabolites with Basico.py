@@ -1,28 +1,16 @@
 ##!/usr/bin/env python
 # coding: utf-8
 
-# # Getting and setting reaction parameters and reactions with Basico
-
-# In[1]:
-
+# This script shows how to get and set parameters of a model
+# using Basico package
 
 import sys
 sys.path.append('..')
-get_ipython().magic(u'matplotlib inline')
-
-
-# In[2]:
-
-
 from basico import *
 
 
-# ### Load model
-
-# In[3]:
-
-
-biomod = load_example("LM-test1")
+# Load an example model
+biomodel = basico.model_io.load_example("LM-test1")
 
 
 # ## Getting/setting global quantities
@@ -89,7 +77,7 @@ get_species(name = 'E')['initial_concentration']
 # In[9]:
 
 
-set_species(name = 'E', new_name = 'Lilija')
+set_species(name = 'E', new_name = 'JAK')
 
 
 # In[10]:
